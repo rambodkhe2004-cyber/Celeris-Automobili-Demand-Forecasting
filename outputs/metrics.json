@@ -1,0 +1,40 @@
+{
+  "project": "Celeris Automobili Industrial - Demand Forecasting & Planning Control Tower",
+  "history_start": "2019-01",
+  "history_end": "2026-10",
+  "forecast_start": "2026-11",
+  "forecast_end": "2028-05",
+  "train_clean_rows": 244558,
+  "test_rows": 58219,
+  "series_count": 3068,
+  "forecast_total_units": 1977699,
+  "forecast_mean_units": 33.969992614095055,
+  "anomaly_register_rows": 9673,
+  "extreme_demand_rows": 0,
+  "cleaning": {
+    "train_rows_raw": 248248,
+    "invalid_date_rows_dropped": 0,
+    "missing_units_rows": 3580,
+    "non_numeric_units_rows": 218,
+    "negative_units_rows": 497,
+    "year_month_disagreement_rows": 276,
+    "duplicate_record_id_rows_removed": 3682,
+    "duplicate_key_rows_aggregated": 16,
+    "stockout_rows_matched": 5728,
+    "stockout_demand_uplift_units": 96759.0,
+    "missing_demand_to_impute": 3454,
+    "invalid_or_zero_price_rows": 36348
+  },
+  "backtest": {
+    "validation_start": "2025-11",
+    "validation_end": "2026-10",
+    "validation_rows": 36395,
+    "best_iteration": 700,
+    "baseline_seasonal_wape": 0.4839551057162828,
+    "baseline_seasonal_bias": 0.0600851496719964,
+    "baseline_recent_wape": 0.6056320728358205,
+    "baseline_recent_bias": -0.02543792443687803,
+    "lightgbm_wape": 0.29209207567252393,
+    "lightgbm_bias": -0.07050217467014579
+  }
+}

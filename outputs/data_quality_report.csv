@@ -1,0 +1,13 @@
+File,Issue,Rows_Affected,Action
+train.csv,Raw rows,248248.0,Loaded for profiling.
+train.csv,Invalid dates removed,0.0,Rows without a parseable authoritative Date were excluded.
+train.csv,Repeated Record_ID rows,3682.0,Kept row with latest Load_Timestamp.
+train.csv,Duplicate Date-SKU-Region rows,16.0,Aggregated valid transaction quantities to one monthly key.
+train.csv,Date vs Year/Month disagreement,276.0,Trusted Date and recomputed Year and Month.
+train.csv,Missing Units_Sold,3580.0,Used stockout requested demand where available; otherwise seasonal/series median imputation.
+train.csv,Non-numeric Units_Sold,218.0,Parsed comma-formatted values; unresolved values treated as missing then imputed.
+train.csv,Negative Units_Sold,497.0,Clipped invalid negative demand to zero and flagged it.
+inventory_stockouts.csv,Matched stockout keys,5728.0,Used Requested_Units as unconstrained demand.
+inventory_stockouts.csv,Demand uplift from stockouts,96759.0,Added requested-minus-shipped demand into training target.
+train.csv,Zero or invalid unit prices,36348.0,"Imputed SKU-year median positive price, then SKU median."
+cleaned_history.csv,Extreme demand flags,0.0,Retained observations; flagged for business validation.
